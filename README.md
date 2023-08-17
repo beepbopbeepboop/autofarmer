@@ -1,15 +1,15 @@
-(WIP) minetest_autofarmer
+autofarmer
 ================
 
 by Izzy
 Props to RealBadAngel, VanessaE. Lots of code "borrowed" from them.
 
-Edit and fixes by HarrierJack, borrowing even more code..
+Edit and fixes by HarrierJack and beepbopbeepboop, borrowing even more code..
 
 ###Introduction:
 Adds automatic farming machines to minetest. They run on LV/MV/HV power from technic, and integrate with pipeworks. 
 
-The planter will put seeds from the normal game plants (wheat etc.) and plants without seeds from farming_plus (farming redo?) onto available farmland in its front position and only at its own block level. 
+The planter will put seeds from the normal game plants (wheat etc.) and plants without seeds from farming onto available farmland in its front position and only at its own block level. 
 
 A mesecon signal can be used to turn the machine off. Powering the planter is enough to activate it, providing there are seeds/plants inside it.
 
@@ -22,15 +22,14 @@ The Harvester will 'harvest' any plant/tree node within it's reach, settings are
 
 
 ####TODO: 	
-	- [X] fix planter
 	- [ ] do something with water/pipes? (probably not)
-	- [X] fix/create harvester
-	- [ ] tweak craft / default settings (feedback appreciated)
-	- [ ] test/squash/enjoy
 	- [ ] ohyeah, some pretty textures would be nice.. :S
+	- [ ] Consider bonemeal for added speed.
 
 ###How to install:
-TIP: It's usually better to rename the folder to 'autofarmer' removing the trailing 'minetest_'.
+Import and enable autofarmer from ContentDB.
+
+Manual method:
 
 Unzip the archive an place it in minetest-base-directory/mods/minetest/
 if you have a windows client or a linux run-in-place client. If you have
