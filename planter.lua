@@ -107,7 +107,7 @@ local function plant_seed(pos, node)
 	local plantname = nil
 	local stackindex = nil
 
-	localinv = inv:get_list("src")
+	local localinv = inv:get_list("src")
 	if localinv ~= nil then 
 		for key,value in pairs(localinv) do 
 			plantname = autofarmer.seeds_nodes[value:get_name()]
@@ -125,7 +125,7 @@ local function plant_seed(pos, node)
 	end
 
 	-- set plant
-	minetest.env:set_node(plantp, {name=plantname})
+	minetest.set_node(plantp, {name=plantname})
 
 	-- decrement seed stack
 	local src = inv:get_stack("src", stackindex)
@@ -220,7 +220,7 @@ minetest.register_node("autofarmer:lv_planter", {
 		local size = 6
 		local meta = minetest.get_meta(pos)
 		meta:set_string("infotext", "LV Planter")
-		meta:set_string("formspec", "invsize[8,7;]list[current_name;src;2.5,0;3,2;]list[current_player;main;0,3;8,4;]")
+		meta:set_string("formspec", "size[9,7;]list[current_name;src;2.5,0;3,2;]list[current_player;main;0,3;9,4;]")
 		meta:set_int("enabled", 0)
 		meta:set_string("power_flag", "LV")
 		set_planter_demand(meta)
@@ -269,9 +269,9 @@ local function set_HV_planter_formspec(meta)
 	local side = meta:get_int("farm_side")
 	local length = meta:get_int("farm_length")
 	
-	meta:set_string("formspec", "invsize[8,7;]"..
+	meta:set_string("formspec", "size[9,7;]"..
 			"list[current_name;src;0,0;4,2;]"..
-			"list[current_player;main;0,3;8,4;]"..
+			"list[current_player;main;0,3;9,4;]"..
 			"field[5,0.5;1,1;farm_side;Side;"..side.."]"..	
 			"field[5,1.5;1,1;farm_length;Length;"..length.."]"..
 			"button_exit[6,2;2,1;exit;Save]")
@@ -319,7 +319,7 @@ minetest.register_node("autofarmer:mv_planter", {
 		local size = 8
 		local meta = minetest.get_meta(pos)
 		meta:set_string("infotext", "MV Planter")
-		meta:set_string("formspec", "invsize[8,7;]list[current_name;src;2,0;4,2;]list[current_player;main;0,3;8,4;]")
+		meta:set_string("formspec", "size[9,7;]list[current_name;src;2,0;4,2;]list[current_player;main;0,3;9,4;]")
 		meta:set_string("power_flag", "MV")
 		meta:set_int("enabled", 0)
 		set_planter_demand(meta)
