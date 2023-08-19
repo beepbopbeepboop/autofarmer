@@ -65,6 +65,9 @@ autofarmer.seeds_nodes = {
 	["farming:corn"]="farming:corn_1",
 	["farming:cucumber"]="farming:cucumber_1",
 	["farming:carrot"]="farming:carrot_1",
+	-- TODO: Add a slot for farming:trellis, and consume for each
+	-- grapes planted. For now, we just automagically appear a
+	-- trellis for each grapes.
 	["farming:grapes"]="farming:grapes_1",
 	["farming:melon_slice"]="farming:melon_1",
 	["farming:pumpkin"]="farming:pumpkin_1",
@@ -76,7 +79,11 @@ autofarmer.seeds_nodes = {
 	-- Missing from farming
 	["farming:artichoke"]="farming:artichoke_1",
 	["farming:asparagus"]="farming:asparagus_1",
-	-- ["farming:beanpole"]="farming:beanpole_1",
+	-- Beans grow on beanpoles. TODO: Add a slot for
+	-- farming:beanpole and consume for each beans planted.  For
+	-- now, we just automagically appear a beanpole for each
+	-- beans.
+	["farming:beans"]="farming:beanpole_1",
 	["farming:beetroot"]="farming:beetroot_1",
 	["farming:blackberry"]="farming:blackberry_1",
 	["farming:cabbage"]="farming:cabbage_1",
@@ -96,7 +103,7 @@ autofarmer.seeds_nodes = {
 	["farming:soy_pod"]="farming:soy_1",
 	["farming:spinach"]="farming:spinach_1",
 	["ethereal:strawberry"]="ethereal:strawberry_1",
-	["farming:sunflower"]="farming:sunflower_1",
+	["farming:seed_sunflower"]="farming:sunflower_1",
 	["farming:vanilla"]="farming:vanilla_1",
 
 
@@ -146,8 +153,7 @@ autofarmer.harvester_dig_nodes = {
 	["farming:raspberry_4"] = true,
 	["farming:blueberry_4"] = true,
 	["farming:potato_4"] = true,
-	["farming:rhubarb_3"] = true,
-	-- updated to 4
+	["farming:rhubarb_4"] = true,
 	["farming:cocoa_4"] = true,
 
 	-- Missing from farming
@@ -174,9 +180,10 @@ autofarmer.harvester_dig_nodes = {
 	["farming:sunflower_8"] = true,
 	["farming:vanilla_8"] = true,
 
-	-- TODO things on stakes?
--- 	["farming:grapes_8"] = true,
---	["farming:beanpole_5"] = true,
+	-- Things on trellis:
+	["farming:grapes_8"] = true,
+	-- Things on beanpole:
+	["farming:beanpole_5"] = true,
 
 	-- fruits from trees
 	["default:apple"] = true,
